@@ -1,19 +1,17 @@
-pipeline{
+pipeline {
     agent any
-    environment{
-        def myString = "Hello World"
-        def myNumber = 10
-        def myBool = true
+    environment {
+        MY_STRING = "Hello World"
+        MY_NUMBER = 10
+        MY_BOOL = "true"  // Strings, as environment variables can only hold string values
     }
-
     stages {
-        stage ("Demo"){
-            steps{
-                echo 'Greeting : ${myString}'
-                echo 'AGe : ${myNumber}'
-                echo 'Are you Alive : ${myBool}'
+        stage("Demo") {
+            steps {
+                echo "Greeting : ${MY_STRING}"
+                echo "Age : ${MY_NUMBER}"
+                echo "Are you Alive : ${MY_BOOL}"
             }
-        
         }
     }
 }
