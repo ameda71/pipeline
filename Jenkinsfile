@@ -1,8 +1,8 @@
-pipeline{
+pipeline {
     agent any
     stages {
-        stage('Jenkins'){
-            step{
+        stage('Jenkins') {
+            steps {   // Change 'step' to 'steps'
                 echo "Hello"
             }
         }
